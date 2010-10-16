@@ -86,7 +86,7 @@ exports.api.getSecureController = function(method, path) {
 };
 
 exports.api.servers = function() {
-	return servers;
+    return servers;
 };
 
 function redirectSecure() {
