@@ -209,10 +209,6 @@ RequestContext.prototype.renderText = function(text) {
     this.send(text);
 };
 
-RequestContext.prototype.renderNothing = function() {
-    this.send("");
-};
-
 RequestContext.prototype.send = function(text) {
     this.writeHead();
     if(this.request.method != 'HEAD') {
