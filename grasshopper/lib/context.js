@@ -166,8 +166,9 @@ RequestContext.prototype.render = function(view, useLayout, cb) {
         }
         var viewFile = viewsDir + '/' + view + '.' + this.extn;
         if(layout && useLayout) {
+            useLayout = (typeof useLayout == 'string')?useLayout:layout;
             this.model.view = view;
-            viewFile = layout + '.' + this.extn;
+            viewFile = useLayout + '.' + this.extn;
         }
 
         try {
